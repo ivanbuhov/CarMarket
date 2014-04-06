@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNet.Identity;
+
+@model IEnumerable<CarMarket.Models.Offer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
+            <ul>
+                <li> @Html.DisplayFor(modelItem => item.DatePublished)</li>
+                <li>@Html.DisplayFor(modelItem => item.Region)</li>
+                <li>@Html.DisplayFor(modelItem => item.Make)</li>
+                <li>@Html.DisplayFor(modelItem => item.Model)</li>
+                <li>@Html.DisplayFor(modelItem => item.Price)</li>
+                <li>@Html.DisplayFor(modelItem => item.Color)</li>
+                <li>@Html.DisplayFor(modelItem => item.Year)</li>
+                <li>@Html.DisplayFor(modelItem => item.Kilometers)</li>
+                <li>
+                    @Html.ActionLink("Details", "Details", new { id = item.Id, @class = "btn btn-info" })
+                    @if (User.Identity.IsAuthenticated && item.AuthorId == User.Identity.GetUserId())
+                    {
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id, @class = "btn btn-info" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id, @class = "btn btn-danger" })
+                    }
+                </li>
+            </ul>
+        </li>
+    }
+</ul>
