@@ -40,3 +40,86 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+
+/*  CUSTOM CSS  */
+.offers-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+    .offers-list h3 {
+        margin-top: 0;
+    }
+
+    .panel-body {
+        font-size: 20px;
+    }
+
+.offer-price {
+    float: right;
+    font-size: 20px;
+    padding-right: 40px;
+    background: url('/Content/img/price.png') no-repeat center right;
+}
+
+.car-image {
+    float: right;
+    margin-bottom: 10px;
+}
+
+.offer-property {
+    margin-top: 10px;
+    padding-left: 50px;
+}
+
+.offer-color {
+    background: url('/Content/img/color.png') no-repeat center left;
+}
+
+.offer-distance {
+    background: url('/Content/img/distance.png') no-repeat center left;
+}
+
+.offer-place {
+    background: url('/Content/img/place.png') no-repeat center left;
+}
+
+.offer-author {
+    background: url('/Content/img/author.png') no-repeat center left;
+}
+
+.offer-email {
+    background: url('/Content/img/email.png') no-repeat center left;
+}
+
+.offer-phone {
+    background: url('/Content/img/phone.png') no-repeat center left;
+}
+
+.offer-yes {
+    padding-left: 40px;
+    background: url('/Content/img/yes.png') no-repeat center left;
+}
+
+.offer-no {
+    padding-left: 40px;
+    background: url('/Content/img/no.png') no-repeat center left;
+}
+
+.offer-key {
+    font-style: italic;
+    color: #428bca;
+}
+
+.offer-buttons {
+    clear: both;
+    padding-top: 30px;
+}
+
+    .offer-buttons a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }

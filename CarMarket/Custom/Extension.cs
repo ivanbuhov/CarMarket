@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarMarket.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -24,6 +25,11 @@ namespace CarMarket.Custom
                                                     Selected = (value.Equals(selectedValue))
                                                 };
             return SelectExtensions.DropDownListFor(htmlHelper, expression, items);
+        }
+
+        public static MvcHtmlString OfferBoolPropertyClass(this HtmlHelper<Offer> htmlHelper, bool value)
+        {
+            return new MvcHtmlString(value ? "offer-yes" : "offer-no");
         }
     }
 }

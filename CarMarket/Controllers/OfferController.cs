@@ -18,6 +18,7 @@ namespace CarMarket.Controllers
         // GET: /Offer/
         public ActionResult Index()
         {
+            ViewBag.Heading = "All offers";
             var offers = db.Offers.Include(o => o.Author);
             return View(offers.ToList());
         }
@@ -26,6 +27,7 @@ namespace CarMarket.Controllers
         public ActionResult MyOffers()
         {
             string currentUserId = User.Identity.GetUserId();
+            ViewBag.Heading = "My offers";
             var offers = db.Offers.Include(o => o.Author).Where(o => o.AuthorId == currentUserId);
             return View("Index", offers.ToList());
         }
@@ -37,7 +39,7 @@ namespace CarMarket.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Offer offer = db.Offers.Find(id);
+            Offer offer = db.Offers.Include(o => o.Author).Where(o => o.Id == id).FirstOrDefault();
             if (offer == null)
             {
                 return HttpNotFound();

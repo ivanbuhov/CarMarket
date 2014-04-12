@@ -24,6 +24,7 @@ namespace CarMarket.Models
 
         public string AuthorId { get; set; }
 
+        [Display(Name = "Author")]
         public virtual ApplicationUser Author { get; set; }
 
         [DataType(DataType.EmailAddress)]

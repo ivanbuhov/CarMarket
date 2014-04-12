@@ -177,6 +177,16 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\author.png" />
+    <Content Include="Content\img\car.png" />
+    <Content Include="Content\img\color.png" />
+    <Content Include="Content\img\distance.png" />
+    <Content Include="Content\img\email.png" />
+    <Content Include="Content\img\no.png" />
+    <Content Include="Content\img\phone.png" />
+    <Content Include="Content\img\place.png" />
+    <Content Include="Content\img\price.png" />
+    <Content Include="Content\img\yes.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -206,8 +216,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
